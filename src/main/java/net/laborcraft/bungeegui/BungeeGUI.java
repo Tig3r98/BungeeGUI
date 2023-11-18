@@ -7,6 +7,7 @@ import net.laborcraft.bungeegui.config.Configs;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
+import org.bstats.bungeecord.Metrics;
 
 public class BungeeGUI extends Plugin {
 
@@ -31,6 +32,8 @@ public class BungeeGUI extends Plugin {
                 ProxyServer.getInstance().getPluginManager().registerCommand(this, new PanelCommand(panel.getName(), command));
             }
         });
+
+        Metrics metrics = new Metrics(this, 20327);
 
     }
 
