@@ -1,6 +1,5 @@
 package net.laborcraft.bungeegui;
 
-import dev.simplix.protocolize.api.Protocolize;
 import lombok.Getter;
 import net.laborcraft.bungeegui.commands.CommandHandler;
 import net.laborcraft.bungeegui.commands.PanelCommand;
@@ -33,8 +32,6 @@ public class BungeeGUI extends Plugin {
             }
         });
 
-        //setup packet listener
-        Protocolize.listenerProvider().registerListener(new PacketListener());
     }
 
     @Override

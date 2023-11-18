@@ -1,7 +1,7 @@
 name = "example"
 perm = "default"
 rows = 3
-title = "&dBungeeGUI"
+title = "<light_purple>BungeeGUI"
 empty = "GREEN_STAINED_GLASS_PANE"
 sound = "ENTITY_ARROW_HIT_PLAYER"
 emptysound = "ENTITY_PLAYER_LEVELUP:1:1"
@@ -17,10 +17,10 @@ commands = [
 [items.13]
 material = "OAK_SIGN"
 stack = 1
-name = "&dBungeeGUI"
+name = "<light_purple>BungeeGUI"
 lore = [
-  "&eA Bungee Side GUI",
-  "&eFor all your servers"
+  "<yellow>A Bungee Side GUI",
+  "<yellow>For all your servers"
 ]
 enchanted = true
 commands = [
