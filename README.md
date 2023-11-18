@@ -18,51 +18,56 @@ This project is a fork of [VelocityGUI](https://github.com/james090500/VelocityG
 | `/bgui reload` | Reloads the panels and config
 
 ## Config
+The config uses MiniMessage to define colors
 ```toml  
 #The Name of the panel  
-name = "example"  
-  
+name = "example"
+
 #The permission needed to open the panel (Can be anything)  
-perm = "default"  
-  
+perm = "default"
+
 #The rows in the GUI (Max 9)  
-rows = 3  
-  
+rows = 3
+
 #The GUI Title  
-title = "&dBungeeGUI"  
-  
+title = "<light_purple>BungeeGUI"
+
 #Whats empty slots should be filled with (AIR for empty)  
-empty = "GREEN_STAINED_GLASS_PANE"  
-  
+empty = "GREEN_STAINED_GLASS_PANE"
+
 #Sound when opening the GUI  
 sound = "ENTITY_ARROW_HIT_PLAYER"
 
 #Sound when clicking empty slots (numbers are volume and pitch)
 emptysound = "ENTITY_PLAYER_LEVELUP:1:1"
-  
+
 #The commands to open the gui (/rules /version etc)  
-commands = [  
- "rules", "version", "plugins", "help", "pl"]  
-  
+commands = [
+    "rules", "version", "plugins", "help", "pl"
+]
+
 #The Items in the gui  
-[items]  
-  
+[items]
+
 #This is in the 13th slot  
-[items.13]  
+[items.13]
 #The item material  
-material = "OAK_SIGN"  
+material = "OAK_SIGN"
 #The item amount  
-stack = 1  
+stack = 1
 #The item name  
-name = "&dBungeeGUI"  
+name = "<light_purple>BungeeGUI"
 #The items lore  
-lore = [  
- "&eA Bungee Side GUI", "&eFor all your servers"]  
+lore = [
+    "<yellow>A Bungee Side GUI",
+    "<yellow>For all your servers"
+]
 #Is the item enchanted?  
-enchanted = true  
+enchanted = true
 #Commands to run  
-commands = [  
- "psudo= I love BungeeGUI"]  
+commands = [
+    "psudo= I love BungeeGUI"
+]  
 ```  
 
 ## Item Commands
