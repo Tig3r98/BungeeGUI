@@ -1,9 +1,10 @@
 name = "example"
 perm = "default"
 rows = 3
-title = "&dVelocityGUI"
+title = "&dBungeeGUI"
 empty = "GREEN_STAINED_GLASS_PANE"
 sound = "ENTITY_ARROW_HIT_PLAYER"
+emptysound = "ENTITY_PLAYER_LEVELUP:1:1"
 commands = [
   "rules",
   "version",
@@ -16,12 +17,12 @@ commands = [
 [items.13]
 material = "OAK_SIGN"
 stack = 1
-name = "&dVelocityGUI"
+name = "&dBungeeGUI"
 lore = [
-  "&eA Velociy Side GUI",
+  "&eA Bungee Side GUI",
   "&eFor all your servers"
 ]
 enchanted = true
 commands = [
-  "sudo= I love VelocityGUI"
+  "psudo= I love BungeeGUI"
 ]

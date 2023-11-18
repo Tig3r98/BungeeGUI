@@ -1,0 +1,4 @@
+name: BungeeGUI
+version: '${project.version}'
+main: net.laborcraft.bungeegui.BungeeGUI
+description: GUIs for the entire Proxy
