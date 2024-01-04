@@ -1,5 +1,6 @@
 package net.laborcraft.bungeegui.helpers;
 
+import dev.simplix.protocolize.api.chat.ChatElement;
 import dev.simplix.protocolize.api.inventory.Inventory;
 import dev.simplix.protocolize.api.item.BaseItemStack;
 import dev.simplix.protocolize.api.item.ItemStack;
@@ -7,8 +8,10 @@ import dev.simplix.protocolize.data.ItemType;
 import dev.simplix.protocolize.data.inventory.InventoryType;
 import lombok.AccessLevel;
 import lombok.Getter;
+import net.kyori.adventure.text.Component;
 import net.laborcraft.bungeegui.BungeeGUI;
 import net.laborcraft.bungeegui.config.Configs;
+import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.querz.nbt.tag.*;
@@ -70,7 +73,7 @@ public class InventoryBuilder {
      */
     public void setEmpty(String item) {
         ItemStack itemStack = new ItemStack(ItemType.valueOf(item));
-        itemStack.displayName("");
+        itemStack.displayName(ChatElement.ofLegacyText(""));
         itemStack.amount((byte) 1);
 
         int totalSlots = this.getRows().getTypicalSize(player.getPendingConnection().getVersion());
@@ -98,13 +101,13 @@ public class InventoryBuilder {
                 }
             }
 
-            itemStack.displayName(PlaceholderParser.of(this.player, guiItem.getName()));
+            itemStack.displayName(ChatElement.of(PlaceholderParser.of(this.player, guiItem.getName())));
             itemStack.amount(guiItem.getStack());
 
             //Set any lore on the item
             if(guiItem.getLore() != null) {
                 for (String lore : guiItem.getLore()) {
-                    itemStack.addToLore(PlaceholderParser.of(this.player, lore));
+                    itemStack.addToLore(ChatElement.of(PlaceholderParser.of(this.player, lore)));
                 }
             }
 
@@ -188,7 +191,7 @@ public class InventoryBuilder {
      */
     public Inventory build() {
         Inventory inventory = new Inventory(this.getRows());
-        inventory.title(this.getTitle());
+        inventory.title(ChatElement.of(this.getTitle()));
         inventory.items(this.getEmptyItems());
 
         this.getItems().forEach((index, item) -> {
