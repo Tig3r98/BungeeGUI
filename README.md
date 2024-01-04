@@ -2,7 +2,7 @@
 # 📑 BungeeGUI 
 A Proxy wide GUI for Bungeecord  
 This project is a fork of [VelocityGUI](https://github.com/james090500/VelocityGUI) by james090500.  
-**Requires [Protocolize](https://simplixsoft.com/protocolize)**
+**Requires [Protocolize](https://github.com/Exceptionflug/protocolize)**
 
 ## Permissions
 | Permission | Purpose |  
