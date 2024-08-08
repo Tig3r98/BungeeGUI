@@ -10,6 +10,7 @@ import net.md_5.bungee.api.plugin.Command;
 import net.md_5.bungee.api.plugin.TabExecutor;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class CommandHandler extends Command implements TabExecutor {
 
@@ -52,10 +53,19 @@ public class CommandHandler extends Command implements TabExecutor {
             });
             return;
         }
-        if(commandSender instanceof ProxiedPlayer) {
-            new InventoryLauncher().execute(strings[1], (ProxiedPlayer) commandSender);
+        if(strings.length < 3){
+            if(commandSender instanceof ProxiedPlayer) {
+                new InventoryLauncher().execute(strings[1], (ProxiedPlayer) commandSender);
+            } else {
+                commandSender.sendMessage(TextComponent.fromLegacyText(BungeeGUI.PREFIX + "Only a player can run this command!"));
+            }
         } else {
-            commandSender.sendMessage(TextComponent.fromLegacyText(BungeeGUI.PREFIX + "Only a player can run this command!"));
+            ProxiedPlayer player = BungeeGUI.getInstance().getProxy().getPlayer(strings[2]);
+            if(player == null){
+                commandSender.sendMessage(TextComponent.fromLegacyText(BungeeGUI.PREFIX + "Player not found."));
+            } else {
+                new InventoryLauncher().execute(strings[1], player);
+            }
         }
     }
 
@@ -73,6 +83,6 @@ public class CommandHandler extends Command implements TabExecutor {
     public Iterable<String> onTabComplete(CommandSender commandSender, String[] strings) {
         if(strings.length == 1) return Arrays.asList("panel", "reload");
         if(strings.length == 2 && strings[0].equals("panel")) return Configs.getPanels().keySet();
-        return null;
+        return Collections.emptyList();
     }
 }
