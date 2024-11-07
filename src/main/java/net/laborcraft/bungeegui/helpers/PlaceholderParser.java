@@ -13,7 +13,7 @@ import java.util.Set;
 
 public class PlaceholderParser {
 
-    private static final Set<String> servers = ProxyServer.getInstance().getServersCopy().keySet();
+    private static final Set<String> servers = ProxyServer.getInstance().getServers().keySet();
 
     public static @NotNull BaseComponent[] of(ProxiedPlayer player, String rawString) {
         //Username
