@@ -48,6 +48,12 @@ commands = [
     "rules", "version", "plugins", "help", "pl"
 ]
 
+#The servers to which this command supports connection to (as an argument)
+servers = [
+    "lobby",
+    "survival"
+]
+
 #The Items in the gui  
 [items]
 

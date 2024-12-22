@@ -12,6 +12,10 @@ commands = [
   "help",
   "pl"
 ]
+servers = [
+"lobby",
+"survival"
+]
 
 [items]
 [items.13]
