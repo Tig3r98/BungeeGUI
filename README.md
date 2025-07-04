@@ -4,7 +4,7 @@ A Proxy wide GUI for Bungeecord
 This project is a fork of [VelocityGUI](https://github.com/james090500/VelocityGUI) by james090500.  
 **Requires [Protocolize](https://github.com/Exceptionflug/protocolize)**
 
-![bStats](https://bstats.org/signatures/bungeecord/BungeeGUI.svg)
+This project has been archived since I don't use Bungeecord anymore.
 
 ## Permissions
 | Permission | Purpose |  
